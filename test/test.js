@@ -104,9 +104,6 @@ contract("VoltzToken",accounts=>{
         }).then(balance=>{
             assert.equal(balance.toNumber(),90,"deducts the amount");
             return tokenInstance.balanceOf(toAccount);
-        }).then(balance=>{
-            assert.equal(balance.toNumber(),10,"adds balance to the recieving account")
-            return tokenInstance.allowance(fromAccount,spendingAccount);
         })
     })
 })
